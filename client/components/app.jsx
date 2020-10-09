@@ -16,10 +16,11 @@ export default class App extends React.Component {
         params: {}
       },
       foodSuggestions: {
-        restaurant: {}
+        restaurant: []
       }
     };
     this.setView = this.setView.bind(this);
+    this.addRestaurant = this.addRestaurant.bind(this);
   }
 
   setView(name, params) {
@@ -68,7 +69,7 @@ export default class App extends React.Component {
       return (
         <div>
           < Header />
-          < Ballot view={this.setView} numberOfPeople={this.state.view.params}/>
+          < Ballot view={this.setView} numberOfPeople={this.state.view.params} res={this.addRestaurant}/>
         </div>
       );
     } else if (viewType === 'vote') {

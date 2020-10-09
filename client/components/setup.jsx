@@ -15,7 +15,7 @@ class Setup extends React.Component {
 
   handleSubmit(event) {
     this.props.view('ballot', this.state.value);
-    alert('Amount of people in your group: ' + this.state.value);
+    // alert('Amount of people in your group: ' + this.state.value);
     event.preventDefault();
   }
 
